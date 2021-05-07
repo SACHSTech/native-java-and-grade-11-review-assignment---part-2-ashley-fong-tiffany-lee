@@ -1,8 +1,16 @@
 package gr11review.part2;
 import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+
 
 public class Utility {
 
+//Method 1
 public static String zipZap(String str){
   
  String output = ""; 
@@ -20,6 +28,26 @@ public static String zipZap(String str){
     // Return output string
     return output;
     
+}
+
+//FileIO 1
+public static String longestWord(String filenametxt) throws IOException {
+
+  BufferedReader key = new BufferedReader(new FileReader(filenametxt));
+
+  String longest = ""; 
+  String current = key.readLine(); 
+
+  while(current != null){
+    if(current.length() >= longest.length()){
+      longest = current; 
+    }
+    current = key.readLine(); 
+  }
+
+  key.close();
+  return longest;
+
 }
 
 
