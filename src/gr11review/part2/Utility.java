@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
-
-
+import java.util.Arrays;
 
 public class Utility {
 
@@ -50,5 +49,25 @@ public static String longestWord(String filenametxt) throws IOException {
 
 }
 
+public static int[] tenRun(int[] nums){
+ 
+  for(int i = 0; i<nums.length -1; i++){
+
+    if(nums[i] % 10 == 0 ){
+      if(nums[i+1] % 10 !=0){
+        nums[i+1] = nums[i];
+      }
+    }
+  }
+
+  /*System.out.print("[");
+  for(int k = 0; k < nums.length-1; k++){
+    System.out.print(nums[k] + ", ");
+  }
+  System.out.print(nums[nums.length-1]);
+  System.out.print("]");*/
+
+  return nums; 
+}
 
 }

@@ -22,7 +22,10 @@ public class Main{
     // FileIO = Read 1
     System.out.println(Utility.longestWord("src/gr11review/part2/words.txt"));
     
-
+    // Array 1 - One Dimensional 
+    int[] nums = {1, 10, 2, 20, 30, 40};
+    nums = Utility.tenRun(nums);
+    System.out.println(Arrays.toString(nums));
 
   }
   
