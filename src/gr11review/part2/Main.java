@@ -28,21 +28,21 @@ public class Main {
 
     //testing arrays 2 
 
-    int[] nums = {1, 2, 3, 5, 2};
+    int[] nums = {1, 2, 2, 5, 2};
     int value = 2; 
     Utility array2 = new Utility(); 
 
     System.out.println("The new array is " +java.util.Arrays.toString(array2.notAlone(nums, value))); 
-    //System.out.println();
-    //System.out.println("");
 
     //testing arrays 4
-
-    int[] number = {4, 4};
-
+    
+    int[] number = {1, 1, 2, 4};
+    //Utility array4 = new Utility();
     boolean balance = Utility.canBalance(number); 
-    System.out.println(balance);
+    //System.out.println(array4.canBalance(number));
+    System.out.println(balance); 
 
+    
     //testing arrays 6
 
     int n = 3; 
