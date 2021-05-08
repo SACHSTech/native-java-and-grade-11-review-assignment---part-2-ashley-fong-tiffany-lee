@@ -5,7 +5,7 @@ import gr11review.part2.Utility.*;
 public class Utility {
 
   /**
-  * A program that returns the sum of the numbers appearing in a string, ignoring all other characters
+  * Given a string with numbers and letters, return the sum of the numbers appearing in the string, ignoring all other characters
   *
   * @param userInput The string that is checked 
   * @return sum of numbers in userInput
@@ -50,7 +50,7 @@ public class Utility {
   }
 
   /**
-  * A program that, given the name of a file that contains a single word on each line, returns the word that is alphabetically first
+  * Given the name of a file that contains a single word on each line, return the word that is alphabetically first
   *
   * @param filenametxt The name of the file that is checked 
   * @return the word that is alphabetically firt
@@ -131,8 +131,8 @@ public class Utility {
   /**
   * A program that returns true if there is a place to split the array so that the sum of the numbers on one side is equal to the sum of the numbers on the other side.
   *
-  * @param number
-  * @return sum of numbers in userInput
+  * @param nums The array that is being checked
+  * @return boolean that tells if the array can be split into two equal sums
   * @author A. Fong
   *
   */
@@ -171,54 +171,68 @@ public class Utility {
   }
 
   /**
-  * A program that returns the sum of the numbers appearing in a string, ignoring all other characters
+  * Given a number (n), a two-dimensional array of size (n×n) is created, with a comma between each number:
+  * The positions on the minor diagonal receive 1
+  * The positions above this diagonal receive 0
+  * The positions below the diagonal receive 2
   *
-  * @param userInput the string that is checked 
-  * @return sum of numbers in userInput
+  * @param n The number that determines the size of the array 
   * @author A. Fong
   *
   */
 
   public static void diagonal (int n) throws IOException {
     
+    //printwriter writes to the file 
     PrintWriter outputFile = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt"));
     
+    //declaring and initializing variables
     int count; 
     int count2; 
     int[][] grid = new int[n][n];
 
-    //row 
+    //loops through the rows of the array
     for (count = 0; count < n; count++) { 
       
-      //column 
+      //loops through the columns of the array
       for (count2 = 0; count2 < n; count2++) { 
-
+        
+        //set array value to 1 if the sum of the current row and current column equal one less than n
         if (count + count2 == n - 1) {
           grid[count][count2] = 1;
         }
-
+        
+        //set array value to 0 if the sum of the current row and current column equal less than n - 1
         else if (count + count2 < n - 1) { 
           grid[count][count2] = 0;
         }
 
+        //set array value to 2 if the sum of the current row and current column equal more than n - 1
         else if (count + count2 > n - 1) { 
           grid[count][count2] = 2;
         }
       }
     }
 
+    //looping to print to the text file 
+    //loops through the rows of the array 
     for (count = 0; count < n; count++) {
-
+      
+      //loops throught the column of the array 
       for (count2 = 0; count2 < n; count2++) { 
         outputFile.print(grid[count][count2]);
 
+        //if the column is any but the last, print a comma after the number 
         if (count2 != n - 1) {
           outputFile.print(",");
         }
       }
+
+      //after each row is done, go to the next line of the text file
       outputFile.println(""); 
     }
 
+    //close the file 
     outputFile.close(); 
 
   }
