@@ -126,4 +126,47 @@ public class Utility {
 
   }
 
+  /**
+   * A program that returns the sum of the numbers appearing in a string, ignoring all other characters
+   *
+   * @param userInput the string that is checked 
+   * @return sum of numbers in userInput
+   * @author A. Fong
+   *
+   */
+   
+  public static boolean canBalance (int[] number){ 
+    
+    //declaring and initializing variables
+    int i;
+    int sum1 = 0; 
+    int sum2; 
+    int sumTotal = 0; 
+    int length = number.length; 
+
+    //calculates the sum of all the whole array 
+    for (i = 0; i < length; i++) { 
+      sumTotal += number[i]; 
+    }
+
+    //loops until the end of the array 
+    for (i = 0; i < length; i++){ 
+
+      //subtracts the current array value from the total to get sum1 
+      //subtracts that sum1 from the total to get sum2
+      sum1 = sumTotal - number[i]; 
+      sum2 = sumTotal - sum1; 
+      
+      //if the first sum equal the second sum, return true
+      if (sum1 == sum2) {
+        return true; 
+      }
+
+    }
+
+    //returns false if the sums never equal each other by the end of the loop 
+    return false; 
+
+  }
+
 }

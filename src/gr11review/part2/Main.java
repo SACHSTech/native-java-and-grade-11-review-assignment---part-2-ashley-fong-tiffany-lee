@@ -34,5 +34,12 @@ public class Main {
 
     System.out.println("The new array is " +java.util.Arrays.toString(array2.notAlone(nums, value))); 
 
+    //testing arrays 4
+
+    int[] number = {4, 4};
+
+    boolean sum = Utility.canBalance(number); 
+    System.out.println(sum);
+    
   }
 }
