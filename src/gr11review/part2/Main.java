@@ -19,5 +19,12 @@ public class Main {
 
     System.out.println(numberSum); 
 
+    //testing fileio 2
+    String alpha; 
+
+    alpha = Utility.alphaWord("src/gr11review/part2/words.txt"); 
+
+    System.out.println(alpha); 
+
   }
 }

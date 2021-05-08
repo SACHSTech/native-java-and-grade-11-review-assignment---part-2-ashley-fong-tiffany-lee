@@ -49,4 +49,42 @@ public class Utility {
 
   }
 
+  /**
+   * A program that returns the sum of the numbers appearing in a string, ignoring all other characters
+   *
+   * @param userInput the string that is checked 
+   * @return sum of numbers in userInput
+   * @author A. Fong
+   *
+   */
+  
+  public static String alphaWord (String filenametxt) throws IOException {
+    
+    //buffered reader reads file
+    BufferedReader file = new BufferedReader (new FileReader(filenametxt));
+
+    //declaring and initialzing variables
+    String word = "";
+    String alpha = "z"; 
+
+    //loops until a word does not exist
+    while (word != null) {
+      word = file.readLine();
+
+      //if the word being read is alphabetically ahead (>0) of the current alpha word, replace it to make it the new alpha word
+      if (word != null && alpha.compareToIgnoreCase(word) > 0) {
+        alpha = word; 
+      }
+    }
+    
+    //close the file 
+    file.close(); 
+
+    //return the word that is first alphabetically
+    return alpha; 
+
+  }
+
+  
+
 }
