@@ -33,13 +33,21 @@ public class Main {
     Utility array2 = new Utility(); 
 
     System.out.println("The new array is " +java.util.Arrays.toString(array2.notAlone(nums, value))); 
+    //System.out.println();
+    //System.out.println("");
 
     //testing arrays 4
 
     int[] number = {4, 4};
 
-    boolean sum = Utility.canBalance(number); 
-    System.out.println(sum);
-    
+    boolean balance = Utility.canBalance(number); 
+    System.out.println(balance);
+
+    //testing arrays 6
+
+    int n = 3; 
+
+    Utility.diagonal(n); 
+
   }
 }

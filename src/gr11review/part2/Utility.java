@@ -134,7 +134,7 @@ public class Utility {
    * @author A. Fong
    *
    */
-   
+
   public static boolean canBalance (int[] number){ 
     
     //declaring and initializing variables
@@ -161,11 +161,56 @@ public class Utility {
       if (sum1 == sum2) {
         return true; 
       }
-
     }
 
     //returns false if the sums never equal each other by the end of the loop 
     return false; 
+
+  }
+
+  public static void diagonal (int n) throws IOException{
+    
+    PrintWriter outputFile = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt", true));
+    
+    int count; 
+    int count2; 
+    int[][] grid = new int[n][n];
+
+    //row 
+    for (count = 0; count < n; count++) { 
+      
+      //column 
+      for (count2 = 0; count2 < n; count2++) { 
+
+        if (count + count2 == n - 1) {
+          
+          grid[count][count2] = 1;
+
+        }
+        else if (count + count2 < n - 1) { 
+          grid[count][count2] = 0;
+        }
+
+        else if (count + count2 > n - 1) { 
+          grid[count][count2] = 2;
+        }
+      }
+    }
+
+    for (count = 0; count < n; count++) {
+
+      for (count2 = 0; count2 < n; count2++) { 
+        //System.out.println(grid[n][n]);
+        outputFile.print(grid[count][count2]);
+
+        if (count2 != n - 1){
+          outputFile.print(",");
+        }
+      }
+      outputFile.println(""); 
+    }
+
+    outputFile.close(); 
 
   }
 
