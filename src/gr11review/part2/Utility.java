@@ -141,7 +141,7 @@ public class Utility {
     
     //declaring and initializing variables
     int i;
-    int sum1 = 0; 
+    int sum1 = 0;
     int sum2; 
     int sumTotal = 0; 
     int length = nums.length; 
@@ -156,7 +156,7 @@ public class Utility {
 
       //subtracts the current array value from the total to get sum1 
       //subtracts that sum1 from the total to get sum2
-      sum1 = sumTotal - nums[i]; 
+      sum1 += nums[i]; 
       sum2 = sumTotal - sum1; 
       
       //if the first sum equal the second sum, return true

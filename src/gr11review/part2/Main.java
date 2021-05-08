@@ -9,15 +9,12 @@ public class Main {
     BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
     //testing method 2
-    String userInput;
-    int numberSum; 
-
-    System.out.println("Enter a sentence");
-    userInput = key.readLine();
+    String userInput = "aa11b33";
+    int numberSum;
 
     numberSum = Utility.sumNumbers(userInput);
 
-    System.out.println(numberSum); 
+    System.out.println("The sum of the digits is " +numberSum); 
 
     //testing fileio 2
     String alpha; 
@@ -28,7 +25,7 @@ public class Main {
 
     //testing arrays 2 
 
-    int[] nums = {1, 2, 2, 5, 2};
+    int[] nums = {1, 2, 3, 2, 5, 2};
     int value = 2; 
     Utility array2 = new Utility(); 
 
@@ -36,13 +33,11 @@ public class Main {
 
     //testing arrays 4
     
-    int[] number = {1, 1, 2, 4};
-    //Utility array4 = new Utility();
+    int[] number = {1, 1, 1, 2, 1};
     boolean balance = Utility.canBalance(number); 
-    //System.out.println(array4.canBalance(number));
-    System.out.println(balance); 
 
-    
+    System.out.println("The sums can balance: " +balance); 
+
     //testing arrays 6
 
     int n = 3; 
