@@ -85,6 +85,45 @@ public class Utility {
 
   }
 
-  
+  /**
+   * A program that returns the sum of the numbers appearing in a string, ignoring all other characters
+   *
+   * @param userInput the string that is checked 
+   * @return sum of numbers in userInput
+   * @author A. Fong
+   *
+   */
+
+  public static int[] notAlone (int[] nums, int value) {
+    
+    //calculates the length of the array 
+    int length = nums.length; 
+
+    //loops until the end of the word 
+    for (int i = 0; i < length - 1; i++) {
+      
+      //checks if the value in the array is the same as the given value
+      if (nums[i] == value) { 
+        
+        //makes sure the element of the array is "alone" (there are values before and after it)
+        if (i - 1 >= 0 && i + 1 <= nums.length) {
+
+          //if the number before is greater than the value after, it becomes the new value
+          if (nums[i - 1] > nums[i + 1]) { 
+            nums[i] = nums[i - 1];
+          }
+
+          //if the number after is greater than the value before, it becomes the new value
+          else if (nums[i - 1] < nums[i + 1]) { 
+            nums[i] = nums[i + 1];
+          }
+        }
+      }
+    }
+
+    //returns the new array
+    return nums; 
+
+  }
 
 }

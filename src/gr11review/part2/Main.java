@@ -26,5 +26,13 @@ public class Main {
 
     System.out.println(alpha); 
 
+    //testing arrays 2 
+
+    int[] nums = {1, 2, 3, 5, 2};
+    int value = 2; 
+    Utility array2 = new Utility(); 
+
+    System.out.println("The new array is " +java.util.Arrays.toString(array2.notAlone(nums, value))); 
+
   }
 }
