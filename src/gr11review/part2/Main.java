@@ -7,10 +7,8 @@ import java.util.*;
 import java.io.*;
 
 public class Main { 
-  public static void main(String[] args) throws IOException {sni
-    BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
-    
-                                                       
+  public static void main(String[] args) throws IOException {
+                                                 
     // Methods 1
     String str = "zipXzap";
     System.out.println(Utility.zipZap(str));
@@ -44,7 +42,7 @@ public class Main {
 
 
     //testing arrays 2 
-    int[] nums = {1, 2, 3, 2, 5, 2};
+    //int[] nums = {1, 2, 3, 2, 5, 2};
     int value = 2; 
     Utility array2 = new Utility(); 
 
