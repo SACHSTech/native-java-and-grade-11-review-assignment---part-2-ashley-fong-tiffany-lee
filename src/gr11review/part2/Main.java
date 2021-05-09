@@ -21,7 +21,7 @@ public class Main {
 
     alpha = Utility.alphaWord("src/gr11review/part2/words.txt"); 
 
-    System.out.println(alpha); 
+    System.out.println("The word that is alphabetically first is " +alpha); 
 
     //testing arrays 2 
 
