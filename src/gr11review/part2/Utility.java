@@ -363,7 +363,7 @@ public class Utility {
   }
 
   /**
-  * Given a number (n), a two-dimensional array of size (n×n) is created, with a comma between each number:
+  * Given a number (n), a two-dimensional array of size (n x n) is created, with a comma between each number:
   * The positions on the minor diagonal receive 1
   * The positions above this diagonal receive 0
   * The positions below the diagonal receive 2
