@@ -344,7 +344,8 @@ public class Utility {
     }
 
     // Create a new textfile for writing the values 
-    PrintWriter pascalOut = new PrintWriter(new FileWriter("src/gr11review/part2/pascalOut.txt"), false);
+    //PrintWriter pascalOut = new PrintWriter(new FileWriter("src/gr11review/part2/pascalOut.txt"), false);
+    PrintWriter pascalOut = new PrintWriter(new FileWriter("pascalOut.txt"), false);
 
     //Print the array into the file 
     for( int n = 0; n < i; n++){
