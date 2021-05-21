@@ -376,7 +376,8 @@ public class Utility {
   public static void diagonal (int n) throws IOException {
     
     //printwriter writes to the file 
-    PrintWriter outputFile = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt"));
+    //PrintWriter outputFile = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt"));
+    PrintWriter outputFile = new PrintWriter(new FileWriter("diagonalOut.txt"));
     
     //declaring and initializing variables
     int count; 
